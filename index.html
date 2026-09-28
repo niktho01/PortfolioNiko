@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikolaj Thomsen· Multimediedesigner</title>
+  <meta name="description" content="Portfolio for Nikolaj Thomsen  Multimediedesigner med fokus på webudvikling, UI/UX design og OOUX. Læser på IBA Kolding 3. semester og søger praktik.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Gå til hovedindhold</a>
+
+
+
+
+<nav class="side-dots" id="side-dots" aria-label="Sektionsnavigation">
+  <a href="#hero"    class="sd" data-label="Hjem"      aria-label="Gå til Hjem"></a>
+  <a href="#about"   class="sd" data-label="Om mig"    aria-label="Gå til Om mig"></a>
+  <a href="#skills"  class="sd" data-label="Evner"     aria-label="Gå til Evner"></a>
+  <a href="#projects" class="sd" data-label="Projekter" aria-label="Gå til Projekter"></a>
+  <a href="#contact" class="sd" data-label="Kontakt"   aria-label="Gå til Kontakt"></a>
+</nav>
+
+
+<svg id="aurora-svg" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <filter id="wglow-p" x="-5%" y="-200%" width="110%" height="500%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="wglow-c" x="-5%" y="-200%" width="110%" height="500%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="wglow-g" x="-5%" y="-200%" width="110%" height="500%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  
+  <path d="M -100 180 C 447 50, 993 310, 1540 180"
+        fill="none" stroke="#9d6cff" stroke-width="28" stroke-linecap="round"
+        opacity="0.55" filter="url(#wglow-p)"/>
+ 
+  <path d="M -100 450 C 447 280, 993 620, 1540 450"
+        fill="none" stroke="#00e5ff" stroke-width="32" stroke-linecap="round"
+        opacity="0.5" filter="url(#wglow-c)"/>
+  
+  <path d="M -100 710 C 447 500, 993 920, 1540 710"
+        fill="none" stroke="#40ffb4" stroke-width="28" stroke-linecap="round"
+        opacity="0.52" filter="url(#wglow-g)"/>
+</svg>
+
+
+<nav class="nav" id="nav">
+  <a href="#hero" class="nav-logo"><img src="images/nt_logo.png" class="nt-logo-img" alt="NT Logo"/></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#hero">Hjem</a></li>
+    <li><a href="#about">Om mig</a></li>
+    <li><a href="#skills">Evner</a></li>
+    <li><a href="#projects">Projekter</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+  <button class="dm-toggle" id="dm-toggle" aria-label="Skift tema" title="Skift dark/light mode">
+    <span class="dm-icon dm-sun"><img src="images/sun.png" alt="Light" style="width:1.4rem;height:1.4rem;object-fit:contain;mix-blend-mode:multiply;"/></span>
+    <span class="dm-icon dm-moon"><img src="images/crescent-moon.png" alt="Dark" style="width:1.4rem;height:1.4rem;object-fit:contain;filter:invert(1);"/></span>
+  </button>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+
+<main id="main">
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">&#10022; Multimediedesigner &middot; <strong>IBA Kolding 3. sem. &middot; 2026</strong></p>
+    <h1 class="hero-name">
+      <span class="name-first">Nikolaj</span>
+      <span class="name-last"><span class="nc-1">Tho</span><span class="nc-2">ms</span><span class="nc-3">en</span></span>
+    </h1>
+    <p class="hero-role"><span id="typewriter"></span><span class="tw-cursor">|</span></p>
+    <p class="hero-desc">Jeg skaber digitale oplevelser der <em>fanger øøjet</em> og <em>holder brugeren</em>. Fra UX-research til kørende kode.</p>
+    <div class="hero-tags">
+      <span>HTML &amp; CSS</span><span>JavaScript</span><span>OOP</span><span>UI/UX</span><span>OOUX</span>
+    </div>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-glow" id="btn-projects">Udforsk projekter</a>
+        <a href="#contact" class="btn-ghost" id="btn-contact">Kontakt mig</a>
+      
+    </div>
+  </div>
+  <div class="hero-bento" id="hero-bento">
+
+    <div class="hb-card hb-status" id="hb-card-status">
+
+      <div class="hb-status-text">
+        <span class="hb-label">Status</span>
+        <span class="hb-val">Leder efter praktik</span>
+      </div>
+    </div>
+  
+    <div class="hb-card hb-stack" id="hb-card-stack">
+      <span class="hb-label">skills</span>
+      <div class="hb-tags">
+        <span>HTML</span><span>CSS</span><span>JS</span><span>Figma</span><span>UX</span><span>OOP</span><span>WCAG</span>
+      </div>
+    </div>
+
+    
+    <div class="hb-card hb-location" id="hb-card-location">
+      <div class="hb-map-pin"><img src="images/placeholder.png" alt="Map pin" style="width: 2rem; height: 2rem; mix-blend-mode: multiply;"/></div>
+      <span class="hb-loc-name">Kolding, DK</span>
+      <div class="hb-loc-tags">
+        <span>IBA 2026</span>
+        <span>3. sem.</span>
+      </div>
+    </div>
+
+    <div class="hb-card hb-quote" id="hb-card-quote">
+      <span class="hb-quote-mark">&ldquo;</span>
+      <p>Vibecoding fungerer godt, så længe man kan være kildekritisk og har styr på det fundamentale.</p>
+      <span class="hb-quote-author">&mdash; Nikolaj</span>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="about" id="about">
+  <div class="container">
+    <span class="section-chip reveal">Om mig</span>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <h2>Hej, jeg er <span class="glow-text">Nikolaj</span></h2>
+        <p>Jeg er 3. semester multimediedesignstuderende på <strong>IBA Kolding</strong> med specialisering i <strong>webudvikling</strong>. Mit mål er at bygge digitale løsninger der er smukke, tilgængelige og fungerer teknisk</p>
+        <p>Jeg arbejder med alt fra <strong>OOUX</strong> og brugerresearch til <strong>OOP i JavaScript</strong> og responsivt CSS. Professionel kode, og design hænger sammen og er essentielt for et godt resultat</p>
+        <div class="about-pills">
+          <span> Web Developer</span>
+          <span> UI Designer</span>
+          <span> UX Researcher</span>
+          <span> Creative Coder</span>
+        </div>
+      
+        <div class="fun-facts reveal">
+          <h3 class="ff-title">Fun facts</h3>
+          <div class="ff-grid">
+            <div class="ff-card" id="ff1">
+              <span class="ff-icon"><img src="images/console.png" alt="Console" style="width:1.8rem;height:1.8rem;object-fit:contain;" /></span>
+              <span class="ff-text">Gaming på PC</span>
+            </div>
+            <div class="ff-card" id="ff2">
+              <span class="ff-icon"><img src="images/software-developer.png" alt="Software Developer" style="width:1.8rem;height:1.8rem;object-fit:contain;" /></span>
+              <span class="ff-text">Vil gerne lære fullstack</span>
+            </div>
+            <div class="ff-card" id="ff3">
+              <span class="ff-icon"><img src="images/artificial-intelligence.png" alt="AI" style="width:1.8rem;height:1.8rem;object-fit:contain;" /></span>
+              <span class="ff-text">Synes AI er essentielt for en fremtid i IT</span>
+            </div>
+            <div class="ff-card" id="ff4">
+              <span class="ff-icon"><img src="images/father-and-daughter.png" alt="Father and daughter" style="width:1.8rem;height:1.8rem;object-fit:contain;" /></span>
+              <span class="ff-text">Snart Far til to</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-portrait reveal">
+        <div class="portrait-wrap">
+          <img src="images/nikolaj.png" alt="Nikolaj Thomsen “ Multimediedesigner" class="portrait-img"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="skills" id="skills">
+  <div class="container">
+    <span class="section-chip reveal">Kompetencer</span>
+    <h2 class="section-h2 reveal">Hvad jeg kan</h2>
+    <div class="skills-grid">
+      <div class="sk-card reveal"><h3>HTML &amp; CSS</h3><p>Grid, Flexbox, animationer, responsivt design.</p></div>
+      <div class="sk-card reveal"><h3>JavaScript</h3><p>DOM, events, closures, promises og OOP.</p></div>
+      <div class="sk-card reveal"><h3>OOP &amp; Arkitektur</h3><p>Klasser, arv, polymorfisme og kodestruktur.</p></div>
+      <div class="sk-card reveal"><h3>UI/UX &amp; OOUX</h3><p>Object-Oriented UX, wireframing, brugerresearch.</p></div>
+      <div class="sk-card reveal"><h3>Grafisk Design</h3><p>Farver, typografi, brandidentitet, Figma.</p></div>
+      <div class="sk-card reveal"><h3>Tilgængelighed</h3><p>WCAG, ARIA-roller, semantisk HTML.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="projects" id="projects">
+  <div class="container">
+    <span class="section-chip reveal">Mine projekter</span>
+    <h2 class="section-h2 reveal">Drej lykkehjulet!</h2>
+    <p class="section-sub reveal">Hvert segment er et af mine live-projekter. Drej hjulet og udforsk mit arbejde.</p>
+    <div class="ws-layout">
+      <div class="ws-left">
+        <div class="wheel-wrap">
+          <div class="wheel-ptr">&#9660;</div>
+          <canvas id="wcanvas" width="400" height="400"></canvas>
+        </div>
+        <button class="spin-btn" id="spin-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38"/></svg>
+          SPIN!
+        </button>
+      </div>
+      <div class="ws-right" id="ws-right">
+        <div class="ws-placeholder" id="ws-placeholder">
+          <div class="wsp-icon"><img src="images/lottery-game_9433590.png" style="width:3rem;height:3rem;object-fit:contain;" alt="Lykkehjul"/></div>
+          <p>Drej hjulet for at se et projekt!</p>
+        </div>
+        <div class="project-preview hidden" id="project-preview">
+          <div class="pp-browser">
+            <div class="pp-bar">
+              <div class="pp-dots"><span class="pd dr"></span><span class="pd dy"></span><span class="pd dg"></span></div>
+              <div class="pp-url" id="pp-url"></div>
+            </div>
+            <div class="pp-frame"><iframe id="pp-iframe" src="" title="Project preview" loading="lazy" scrolling="no"></iframe></div>
+          </div>
+          <div class="pp-info">
+            <span class="pp-live">&#11044; LIVE</span>
+            <h3 id="pp-name"></h3>
+            <p id="pp-desc"></p>
+            <div class="pp-tags" id="pp-tags"></div>
+            <a href="#" class="btn-glow" id="pp-link" target="_blank" rel="noopener">Besøg siden &#8599;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mini-grid" id="mini-grid"></div>
+  </div>
+</section>
+
+
+<section class="contact" id="contact">
+  <div class="container">
+    <span class="section-chip reveal">Kontakt</span>
+    <h2 class="section-h2 reveal">Lad os skabe noget fedt</h2>
+    <p class="section-sub reveal">Klar til en praktikant med interesse for webudvikling? Jeg er klar til at arbejde.</p>
+    <div class="contact-grid">
+      <a href="mailto:niktho01@iba.dk" class="contact-card reveal">
+        <div class="cc-icon"><img src="images/email_3894024.png" class="gh-icon" alt="Email logo"/></div><h3>Email</h3><p>niktho01@iba.dk</p><span class="cc-arrow">&#8599;</span>
+      </a>
+      <a href="https://github.com/niktho01" target="_blank" rel="noopener" class="contact-card reveal">
+        <div class="cc-icon"><img src="images/github-mark.png" class="gh-icon" alt="GitHub logo"/></div><h3>GitHub</h3><p>github.com/niktho01</p><span class="cc-arrow">&#8599;</span>
+      </a>
+      <div class="contact-card reveal">
+        <div class="cc-icon"><img src="images/mortarboard_1940611.png" class="gh-icon" alt="Uddannelse"/></div><h3>Uddannelse</h3><p>Multimediedesign &middot; IBA Kolding &middot; 3. semester</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="nav-logo"><img src="images/nt_logo.png" class="nt-logo-img" alt="NT Logo"/></span>
+    <p>&copy; 2026 Nikolaj Thomsen &middot; HTML, CSS &amp; JavaScript</p>
+    <a href="https://github.com/niktho01" target="_blank" rel="noopener" aria-label="BesÃ¸g min GitHub profil"><img src="images/github-mark.png" class="gh-icon-sm" alt="GitHub logo"/> GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+<script>
+  window.ntModulesLoaded = false;
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      if (!window.ntModulesLoaded) {
+        console.warn("ES6 Moduler blokeret. Indlæser fallback bundle...");
+        var script = document.createElement('script');
+        script.src = 'js/bundle.js';
+        document.body.appendChild(script);
+      }
+    }, 150);
+  });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
