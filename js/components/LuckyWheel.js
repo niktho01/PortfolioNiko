@@ -45,13 +45,13 @@
     ctx.fillStyle = glow;
     ctx.fill();
 
-    /* Segments */
+    
     this.data.forEach((proj, i) => {
       const start = r + i * arc - Math.PI / 2;
       const end   = start + arc;
       const mid   = start + arc / 2;
 
-      /* solid fill */
+      
 
       ctx.beginPath();
       ctx.moveTo(cx, cy);
@@ -60,7 +60,7 @@
       ctx.fillStyle = proj.grad[0];
       ctx.fill();
 
-      /* segment border */
+      
       ctx.beginPath();
       ctx.moveTo(cx, cy);
       ctx.arc(cx, cy, R, start, end);
@@ -69,7 +69,7 @@
       ctx.lineWidth   = 2;
       ctx.stroke();
 
-      /* emoji + label */
+      
       const er  = R * 0.62;
       const ex  = cx + Math.cos(mid) * er;
       const ey  = cy + Math.sin(mid) * er;
@@ -77,7 +77,7 @@
       ctx.translate(ex, ey);
       ctx.rotate(mid + Math.PI / 2);
 
-      /* image or emoji */
+      
       if (proj.imgEl && proj.imgEl.complete) {
         const imgSize = Math.max(24, this.canvas.width / 10);
         const ix = 0;
@@ -96,7 +96,7 @@
         ctx.fillText(proj.emoji, 0, -R * 0.1);
       }
 
-      /* label */
+    
       const lfs = Math.max(10, this.canvas.width / 36);
       ctx.font = '700 ' + lfs + 'px Inter, sans-serif';
       ctx.fillStyle = '#000000';
@@ -107,7 +107,7 @@
       ctx.restore();
     });
 
-    /* Center hub */
+   
     const hub = ctx.createRadialGradient(cx, cy, 0, cx, cy, R * 0.16);
     hub.addColorStop(0, '#ffffff');
     hub.addColorStop(1, '#e0e0f0');
@@ -133,7 +133,7 @@
     this.btn.disabled = true;
 
     const idx   = Math.floor(Math.random() * this.n);
-    /* angle so midpoint of segment `idx` lands at pointer (top = -PI/2) */
+    
     const tgt   = -(idx * this.arc) - Math.PI / this.n;
     const extra = (6 + Math.random() * 4) * 2 * Math.PI;
     const final = tgt + extra;
@@ -149,13 +149,11 @@
       if (p < 1) {
         requestAnimationFrame(tick);
       } else {
-        /* Normalize rotation to [0, 2Ï€) â€” avoids negative modulo issues */
+        
         this.rotation = ((this.rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
         this.spinning = false;
         this.btn.disabled = false;
-        /* Compute which segment is actually under the pointer from final rotation.
-           Pointer is at angle -Ï€/2 (top). Segment i starts at: rot + i*arc - Ï€/2.
-           Winner = floor((2Ï€ - rot) * n / 2Ï€) % n                               */
+       
         const winner = Math.floor((2 * Math.PI - this.rotation) * this.n / (2 * Math.PI)) % this.n;
         this._showProject(winner);
         this._highlight(winner);

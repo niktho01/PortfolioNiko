@@ -1,4 +1,3 @@
-﻿@charset "UTF-8";
 :root {
   --bg: #ffffff;
   --bg2: #f7f8fc;
@@ -146,7 +145,10 @@ body, .nav, .about, .skills, .projects, .contact, .footer,
   padding: 0;
 }
 
-html { scroll-behavior: smooth; font-size: 18px; }
+html {
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
 
 body {
   font-family: "Inter", system-ui, sans-serif;
@@ -586,7 +588,7 @@ strong {
 }
 
 .nav-cta {
-  background: #006d94;
+  background: #0096c7;
   color: #fff;
   border-radius: 10px;
 }
@@ -675,14 +677,16 @@ strong {
 }
 
 .hero-eyebrow {
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   color: var(--hero-eyebrow);
   margin-bottom: 1.4rem;
   opacity: 0.9;
 }
-.hero-eyebrow strong { color: inherit; }
+.hero-eyebrow strong {
+  color: inherit;
+}
 
 .hero-name {
   font-family: "Space Grotesk", sans-serif;
@@ -704,13 +708,16 @@ strong {
 
 .nc-1 {
   color: #006b51;
-} /* grÃƒÂ¸n  Ã¢â‚¬â€ ~5.2:1 mod hvid */
+}
+
 .nc-2 {
   color: #005f8a;
-} /* blÃƒÂ¥   Ã¢â‚¬â€ ~5.8:1 mod hvid */
+}
+
 .nc-3 {
   color: #5a2db5;
-} /* lilla Ã¢â‚¬â€ ~6.1:1 mod hvid */
+}
+
 .hero-role {
   font-family: "Space Grotesk", sans-serif;
   font-size: clamp(1.1rem, 2vw, 1.4rem);
@@ -798,7 +805,7 @@ strong {
 
 .hb-label {
   display: block;
-  font-size: 0.62rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -834,7 +841,7 @@ strong {
 }
 
 .hb-tags span {
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   font-weight: 700;
   padding: 0.3em 0.8em;
   border-radius: 999px;
@@ -877,7 +884,7 @@ strong {
 }
 
 .hb-loc-tags span {
-  font-size: 0.68rem;
+  font-size: 0.8rem;
   font-weight: 600;
   padding: 0.25em 0.65em;
   border-radius: 6px;
@@ -918,7 +925,6 @@ strong {
   letter-spacing: 0.08em;
   margin-top: 0.3rem;
 }
-
 
 .about {
   position: relative;
@@ -1343,11 +1349,36 @@ a.contact-card:hover .cc-arrow {
 }
 
 @media (max-width: 1024px) {
-  .hero-content { display: flex; flex-direction: column; align-items: center; text-align: center; }
-  .hero-desc { text-align: center; }
-  .hero-tags { justify-content: center; }
-  .hero-btns { justify-content: center; }
-  .hero { grid-template-columns: 1fr; }
+  .hero-name {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: baseline;
+    fleex-wrap: wrap;
+  }
+  .name-first, .name-last {
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+    font-size: 4rem;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-desc {
+    text-align: left;
+  }
+  .hero-tags {
+    justify-content: center;
+  }
+  .hero-btns {
+    justify-content: center;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
   .hero-card {
     display: none;
   }
@@ -1366,8 +1397,54 @@ a.contact-card:hover .cc-arrow {
   .contact-grid {
     grid-template-columns: 1fr;
   }
+  .hero-role {
+    font-size: 1.35rem;
+  }
+  .hero-desc {
+    font-size: 1.15rem;
+  }
+  .hero-tags span {
+    font-size: 0.95rem;
+    padding: 0.4em 1.1em;
+  }
+  .hero-eyebrow {
+    font-size: 1.05rem;
+  }
+  .about-text p, .sk-card p, .contact-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+  .sk-card h3, .contact-card h3 {
+    font-size: 1.2rem;
+  }
+  .btn-glow, .btn-ghost, .spin-btn {
+    font-size: 1.1rem;
+    padding: 1em 2em;
+  }
+  .section-sub {
+    font-size: 1.15rem;
+  }
+  .mini-info .mini-title {
+    font-size: 1rem;
+  }
+  .mini-info p {
+    font-size: 0.85rem;
+  }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .hero-name {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+  .name-first, .name-last {
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+    font-size: 2rem;
+  }
   .nav-links {
     display: none;
     position: absolute;
@@ -1398,39 +1475,17 @@ a.contact-card:hover .cc-arrow {
   .ff-grid {
     grid-template-columns: 1fr;
   }
+  .hero-eyebrow {
+    font-size: 0.6rem;
+  }
 }
-
-
-
-
-@media (max-width: 1024px) {
-  .hero-role { font-size: 1.35rem; }
-  .hero-desc { font-size: 1.15rem; }
-  .hero-tags span { font-size: 0.95rem; padding: 0.4em 1.1em; }
-  .hero-eyebrow { font-size: 1.05rem; }
-  .about-text p, .sk-card p, .contact-card p { font-size: 1.05rem; line-height: 1.7; }
-  .sk-card h3, .contact-card h3 { font-size: 1.2rem; }
-  .btn-glow, .btn-ghost, .spin-btn { font-size: 1.1rem; padding: 1em 2em; }
-  .section-sub { font-size: 1.15rem; }
-  .mini-info .mini-title { font-size: 1rem; }
-  .mini-info p { font-size: 0.85rem; }
-}
-
-
-
-img[src*="logokyst_circle.jpg"] {
-  border-radius: 50%;
-  border: 2px solid rgba(79, 110, 247, 0.4);
-  box-shadow: 0 0 6px rgba(79, 110, 247, 0.2);
+img[src*="logokyst.png"] {
   mix-blend-mode: multiply;
-  object-fit: contain !important;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
 }
-[data-theme="dark"] img[src*="logokyst_circle.jpg"] {
-  border-radius: 50%;
-  border: 2px solid rgba(79, 110, 247, 0.4);
-  box-shadow: 0 0 6px rgba(79, 110, 247, 0.2);
+
+[data-theme=dark] img[src*="logokyst.png"] {
   filter: invert(1);
   mix-blend-mode: screen;
-}
-
-
+}/*# sourceMappingURL=style.css.map */
